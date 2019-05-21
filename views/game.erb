@@ -1,0 +1,54 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h2>
+           MASTERMIND GAME 
+        </h2>
+
+        <form action='/game' method='POST'>
+            <select name='color1'>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+            </select>
+            <select name='color2'>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+            </select>
+            <select name='color3'>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+            </select>
+            <select name="color4">
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+            </select>
+            <input type='submit' value='Guess!' />
+        </form>
+        <h3><%= message %></h3>
+        <form action='/' method='GET'>
+            <input type='submit' value='Quit' />
+        </form>
+
+        <p>Turn: <%= turn_counter %></p>
+        <% guess_list.each_with_index do |guess, index| %>
+            <p>Guess <%= index + 1 %>: <%= guess %><p>
+        <% end %>
+    </body>
+</html>
